@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Quiz Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 AI Quiz Builder</h1>
+    <div class="form">
+      <input id="topic" placeholder="Enter quiz topic" />
+      <input id="num" type="number" min="1" max="10" value="5" />
+      <label><input type="checkbox" id="timer-toggle" /> Timer Mode (10s/q)</label>
+      <button onclick="generateQuiz()">Generate Quiz</button>
+    </div>
+
+    <div id="loader" class="hidden">⏳ Generating quiz...</div>
+
+    <div id="quiz-container"></div>
+
+    <button id="submit-btn" class="hidden" onclick="submitQuiz()">Submit</button>
+    <button id="reset-btn" class="hidden" onclick="resetQuiz()">Reset</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
